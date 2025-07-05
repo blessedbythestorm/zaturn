@@ -1,0 +1,52 @@
+.{
+    .name = .zaturn,
+    .fingerprint = 0xbe4d1ba2b261f0e0,
+    .version = "0.0.0",
+    .dependencies = .{
+        .superzig = .{
+            .url = "https://github.com/Super-ZIG/io/archive/refs/heads/master.zip",
+            .hash = "cli-0.0.7-AAAAAIoFCQD4HkHBMG-_f09fcSpMLgL7uJSaSRkk2KXu",
+        },
+        .efsw = .{
+            .url = "https://github.com/SpartanJ/efsw/archive/refs/heads/master.zip",
+            .hash = "N-V-__8AAGsFBgD7tvPW6QpNjTi5KVQQiYtKA4LfeXwPiX8V",
+        },
+        .sdl3 = .{
+            .url = "https://github.com/Gota7/zig-sdl3/archive/refs/heads/master.zip",
+            .hash = "sdl3-0.0.1-NmT1Q1EQHAAyZCHmoUhsG0BB16JBz6kH5V9dbpc3wDhB",
+        },
+        .vulkan_zig = .{
+            .url = "https://github.com/Snektron/vulkan-zig/archive/refs/heads/master.zip",
+            .hash = "vulkan-0.0.0-r7YtxwZVAwDbCFXX5GpnS436SfBec9INY0zq-2OQ2BUp",
+        },
+        .vulkan_headers = .{
+            .url = "https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.4.309.tar.gz",
+            .hash = "N-V-__8AAPzz4AHlh4uxSRPYF16YYiktAY5ZbN3H69vXPDIC",
+        },
+        .toml = .{
+            .url = "https://github.com/sam701/zig-toml/archive/refs/heads/master.zip",
+            .hash = "toml-0.0.0-bV14BfdxAQDXkZ5wL6eVO9zBz622SAdz_pcWuQmTAsMg",
+        },
+        .zgltf = .{
+            .url = "https://github.com/kooparse/zgltf/archive/refs/heads/master.zip",
+            .hash = "zgltf-0.1.0-sX6QAtwJAgB_Qb8QNfJyvGVAVqsH8ABMmyDt6L4D_Cyw",
+        },
+        .zalgebra = .{
+            .url = "https://github.com/kooparse/zalgebra/archive/refs/heads/master.zip",
+            .hash = "zalgebra-0.0.0-aaiVSk5nAQA4CIV_flm1iIpWiSrVcxggA9y_aaa-TtdR",
+        },
+        .yaml = .{
+            .url = "https://github.com/pwbh/ymlz/archive/refs/heads/master.zip",
+            .hash = "ymlz-0.5.0-TG82aTSpAACZLD2zHlFdKz8vzJWjIAUJyiv2-6rN7hNh",
+        },
+        .ziggy = .{
+            .url = "git+https://github.com/kristoff-it/ziggy/#af41bdb5b1d64404c2ec7eb1d9de01083c0d2596",
+            .hash = "ziggy-0.1.0-kTg8v7rKBQCdELbScM186Uh4X3sxhBFgsdNpYcilLhDt",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}

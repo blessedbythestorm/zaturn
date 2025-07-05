@@ -1,0 +1,12 @@
+pub const create_task = @import("api.zig").create_task;
+pub const init_mod = @import("window.zig").init_mod;
+pub const request_extensions = @import("api.zig").request_extensions;
+pub const request_proc_address = @import("api.zig").request_proc_address;
+pub const request_surface = @import("api.zig").request_surface;
+pub const RequestExtensions = @import("tasks.zig").RequestExtensions;
+pub const RequestProcAddress = @import("tasks.zig").RequestProcAddress;
+pub const RequestSurface = @import("tasks.zig").RequestSurface;
+pub const set_hook = @import("api.zig").set_hook;
+pub const Update = @import("tasks.zig").Update;
+pub const Window = @import("window.zig").Window;
+pub const WndTasks = @import("tasks.zig").WndTasks;
