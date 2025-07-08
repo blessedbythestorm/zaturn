@@ -1,0 +1,22 @@
+.rendergraph = {
+    .pass = [
+        {
+            .name = "depth_pass",
+            .type = @renderpass("depth"),
+            .children = [
+                {
+                    .name = "color_root",
+                    .type = "color_root",
+                    .inputs = [
+                        {
+                            .name = "depth",
+                            .type = @texture("color"),
+                            .format = @format("rgba8888"),
+                        },
+                    ],
+                    .output = @format("rgba8888"),
+                },
+            ],
+        },
+    ],
+}

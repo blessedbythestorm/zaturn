@@ -187,7 +187,7 @@ pub const VKContext = struct {
             return error.DeviceLoader;
         };
 
-        self.vkd.* = try DeviceLoader.load(dev, device_proc_addr);
+        self.vkd.* = DeviceLoader.load(dev, device_proc_addr);
         self.device = Device.init(dev, self.vkd);
 
         log.debug("vulkan-init",

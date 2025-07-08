@@ -55,7 +55,7 @@ pub fn build(b: *std.Build) void { // $ls root_id 1
         .optimize = optimize,
     });
 
-    const efsw_build = @import("src/build/efsw.zig");
+    const efsw_build = @import("build/efsw.zig");
     const efsw = efsw_build.build(b, target, optimize);
 
     const zaturn_resources = b.addModule("zaturn-resources", .{
@@ -144,7 +144,7 @@ pub fn build(b: *std.Build) void { // $ls root_id 1
     b.installArtifact(zaturn_exe);
 
     const clear_cache = b.option(bool, "clean", "Clear asset cache") orelse false;
-    const cache = @import("src/build/cache.zig");
+    const cache = @import("build/cache.zig");
 
     cache.init();
     defer cache.deinit();
@@ -164,7 +164,7 @@ pub fn build(b: *std.Build) void { // $ls root_id 1
 
     // Check executable
     const lib_check = b.addExecutable(.{
-        .name = "zaturn-check",
+        .name = "zaturn",
         .root_module = zaturn_root,
     });
 

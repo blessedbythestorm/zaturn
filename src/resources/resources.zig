@@ -30,7 +30,6 @@ pub const Resources = struct {
     config: Config = undefined,
     active_scene: Scene = undefined,
     is_game_dirty: bool = false,
-    is_game_reloaded: bool = false,
 
     pub fn set_hook(mod: *core.Module) void {
         api.mod = mod;
@@ -65,13 +64,13 @@ pub const Resources = struct {
         self.watcher.add_directory(self.config.engine.resources_dir);
         self.watcher.start();
 
-        var arena = std.heap.ArenaAllocator.init(self.allocator);
-        defer arena.deinit();
-
         const scene_path = try std.fs.path.join(self.allocator, &[_][]const u8{ self.config.project.resources_dir, self.config.project.scene });
         defer self.allocator.free(scene_path);
 
-        self.active_scene = try files.readZiggy(Scene, self.allocator, scene_path);
+        var arena = std.heap.ArenaAllocator.init(self.allocator);
+        defer arena.deinit();
+
+        self.active_scene = try files.readZiggy(Scene, arena.allocator(), scene_path);
 
         log.debug("resources-init",
             \\watcher = {?x}

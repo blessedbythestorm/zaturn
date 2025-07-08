@@ -112,7 +112,8 @@ pub fn init() !void {
     defer engine.deinit();
 
     engine.modules.add_unmanaged(Logger);
-    engine.modules.context(Logger)
+    engine.modules
+        .context(Logger)
         .start()
         .wait_ignore();
 

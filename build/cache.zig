@@ -162,7 +162,7 @@ pub fn cache_file(allocator: std.mem.Allocator, file_path: []const u8, cache_sou
     if (cache_sources.sources.fields.getPtr(hash_str)) |cache_source| {
         const file_modified: i64 = @intCast(modified);
         if (cache_source.modified <= file_modified) {
-            return error.CacheUpToDate;
+            return error.FileCacheUpToDate;
         }
     }
 

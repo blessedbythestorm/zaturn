@@ -1,4 +1,5 @@
 const Allocator = @import("std").mem.Allocator;
+
 const Task = @import("zaturn-core").Task;
 
 pub const GpuTasks = enum { Render };

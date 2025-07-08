@@ -44,7 +44,7 @@ pub fn readToStringSentinel(allocator: std.mem.Allocator, path: []const u8) ![:0
         allocator,
         std.math.maxInt(usize),
         null,
-        1,
+        std.mem.Alignment.@"1",
         0,
     );
 }
@@ -57,7 +57,7 @@ pub fn readToString(allocator: std.mem.Allocator, path: []const u8) ![]align(4) 
         allocator,
         std.math.maxInt(usize),
         null,
-        4,
+        std.mem.Alignment.@"4",
         null,
     );
 }

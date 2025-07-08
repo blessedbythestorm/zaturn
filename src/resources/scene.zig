@@ -9,10 +9,9 @@ const Component = @import("components/component.zig").Component;
 const files = @import("files.zig");
 const Resource = @import("resource.zig").Resource;
 
-const SceneNode = struct {
+pub const SceneNode = struct {
     name: []const u8,
     type: []const u8,
-    source: ?[]const u8,
     children: []SceneNode,
 };
 
