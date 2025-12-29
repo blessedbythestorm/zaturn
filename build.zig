@@ -1,7 +1,7 @@
 const std = @import("std");
 
 pub fn build(b: *std.Build) void { // $ls root_id 1
-    const start_build_time = std.time.nanoTimestamp();
+    const start_build_time = std.time.Instant.now();
 
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});

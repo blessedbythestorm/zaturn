@@ -1,10 +1,9 @@
 const std = @import("std");
 
-pub const Component = struct {
+pub const Asset = struct {
     allocator: std.mem.Allocator,
     ptr: *anyopaque,
     vtable: VTable,
-    children: std.ArrayList(*Component),
 
     const VTable = struct {
         init: *const fn (*anyopaque) void,
@@ -23,7 +22,7 @@ pub const Component = struct {
     }
 
     fn generate_interface(ptr: *anyopaque) Component {
-        const T = @TypeOf(ptr);
+        const T = @Type(ptr);
         const ptr_info = @typeInfo(*anyopaque);
 
         const Generated = struct {
@@ -35,7 +34,7 @@ pub const Component = struct {
                 const ptr_self: *T = @ptrCast(pointer);
                 ptr_info.pointer.child.deinit(ptr_self);
             }
-            pub fn tick(pointer: *anyopaque, dt: f32) void {
+            pub fn cache(pointer: *anyopaque, dt: f32) void {
                 const ptr_self: *T = @ptrCast(pointer);
                 ptr_info.pointer.child.update(ptr_self, dt);
             }
@@ -46,7 +45,7 @@ pub const Component = struct {
             .vtable = VTable{
                 .init = Generated.init,
                 .deinit = Generated.deinit,
-                .tick = Generated.tick,
+                .cache = Generated.tick,
             },
         };
     }
@@ -59,15 +58,11 @@ pub const Component = struct {
         self.vtable.deinit(self.ptr);
     }
 
-    pub fn tick(self: *Component, dt: f32) void {
-        self.vtable.tick(self.ptr, dt);
+    pub fn cache(self: *Component, dt: f32) void {
+        self.vtable.cache(self.ptr, dt);
     }
 
     pub fn as(self: *Component, comptime T: type) *T {
         return @ptrCast(self.ptr);
-    }
-
-    pub fn attach(self: *Component, other: *Component) void {
-        self.children.append(other) catch unreachable;
     }
 };

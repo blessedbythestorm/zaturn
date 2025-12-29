@@ -3,8 +3,9 @@ const std = @import("std");
 pub fn build(b: *std.Build, target: std.Build.ResolvedTarget, optimize: std.builtin.OptimizeMode) *std.Build.Step.Compile {
     const efsw_source = b.dependency("efsw", .{});
 
-    const lib_efsw_core = b.addStaticLibrary(.{
+    const lib_efsw_core = b.addLibrary(.{
         .name = "efsw",
+        .linkage = .static,
         .target = target,
         .optimize = optimize,
     });

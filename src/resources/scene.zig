@@ -10,7 +10,7 @@ const files = @import("files.zig");
 const Resource = @import("resource.zig").Resource;
 
 pub const SceneNode = struct {
-    name: []const u8,
+    id: []const u8,
     type: []const u8,
     children: []SceneNode,
 };

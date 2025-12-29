@@ -5,7 +5,7 @@
     .dependencies = .{
         .superzig = .{
             .url = "https://github.com/Super-ZIG/io/archive/refs/heads/master.zip",
-            .hash = "cli-0.0.7-AAAAAIoFCQD4HkHBMG-_f09fcSpMLgL7uJSaSRkk2KXu",
+            .hash = "io-0.0.8-dev.2-4YEdy3LfAAAH25rxJIQi_I55Z2SdlEiasMsSxcTTAH15",
         },
         .efsw = .{
             .url = "https://github.com/SpartanJ/efsw/archive/refs/heads/master.zip",
@@ -13,11 +13,11 @@
         },
         .sdl3 = .{
             .url = "https://github.com/Gota7/zig-sdl3/archive/refs/heads/master.zip",
-            .hash = "sdl3-0.0.1-NmT1Q1EQHAAyZCHmoUhsG0BB16JBz6kH5V9dbpc3wDhB",
+            .hash = "sdl3-0.1.5-NmT1Q3ARJgDmFWtbbK3KBb7vufbQD0EjD4Me4Fbdq0p3",
         },
         .vulkan_zig = .{
             .url = "https://github.com/Snektron/vulkan-zig/archive/refs/heads/master.zip",
-            .hash = "vulkan-0.0.0-r7YtxwZVAwDbCFXX5GpnS436SfBec9INY0zq-2OQ2BUp",
+            .hash = "vulkan-0.0.0-r7Ytx91DAwDKIXS2K_fFa-c_SJ5py7K1eCKwPcc33NcQ",
         },
         .vulkan_headers = .{
             .url = "https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.4.309.tar.gz",
@@ -25,23 +25,23 @@
         },
         .toml = .{
             .url = "https://github.com/sam701/zig-toml/archive/refs/heads/master.zip",
-            .hash = "toml-0.0.0-bV14BfdxAQDXkZ5wL6eVO9zBz622SAdz_pcWuQmTAsMg",
+            .hash = "toml-0.3.0-bV14BeiEAQBmkb-ywYhHxpBdt52ztkRmf-EVyEFbrTxt",
         },
         .zgltf = .{
             .url = "https://github.com/kooparse/zgltf/archive/refs/heads/master.zip",
-            .hash = "zgltf-0.1.0-sX6QAtwJAgB_Qb8QNfJyvGVAVqsH8ABMmyDt6L4D_Cyw",
+            .hash = "zgltf-0.1.0-sX6QAt0SAgDzMQCCG-N181hVbx8JnwFYZ3luQigQpVBM",
         },
         .zalgebra = .{
             .url = "https://github.com/kooparse/zalgebra/archive/refs/heads/master.zip",
-            .hash = "zalgebra-0.0.0-aaiVSk5nAQA4CIV_flm1iIpWiSrVcxggA9y_aaa-TtdR",
+            .hash = "zalgebra-0.0.0-aaiVSrh2AQAo163qnzoq8qsxxuEYQ8_WxAi1WxKvVjoG",
         },
         .yaml = .{
             .url = "https://github.com/pwbh/ymlz/archive/refs/heads/master.zip",
-            .hash = "ymlz-0.5.0-TG82aTSpAACZLD2zHlFdKz8vzJWjIAUJyiv2-6rN7hNh",
+            .hash = "ymlz-0.5.0-TG82aTquAAD7Rv1z2UvVTAvSklXEOOPf6OUI9OBZFJDd",
         },
         .ziggy = .{
-            .url = "git+https://github.com/kristoff-it/ziggy/#af41bdb5b1d64404c2ec7eb1d9de01083c0d2596",
-            .hash = "ziggy-0.1.0-kTg8v7rKBQCdELbScM186Uh4X3sxhBFgsdNpYcilLhDt",
+            .url = "https://github.com/kristoff-it/ziggy/archive/refs/heads/master.zip",
+            .hash = "ziggy-0.1.0-kTg8vwR1BgALu5bIsNMQrQ2h2tpD8P-8Ax-1WjLU3Cuf",
         },
     },
     .paths = .{
